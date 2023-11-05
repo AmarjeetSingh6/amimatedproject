@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Project</title>
+    <style>
+      .comman {
+        width: 278px;
+        height: 212px;
+      }
+      .a_overlays:hover .a_box1 {
+        /*desendance selector*/
+        top: 0px; /*animate from tom top becoz down the hover */
+      }
+      .a_overlays:hover .a_box2 {
+        bottom: 0px;
+      }
+      .a_overlays {
+        /* background-color: red; */
+        background-image: url("img/img2.webp");
+        background-repeat: no-repeat; /*no repeat of img in x=axis and y-axis*/
+        background-size: cover; /*cover background box*/
+        position: relative; /*inform parent to remove child*/
+        overflow: hidden; /*hover overflow*/
+      }
+      .a_box1 {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute; /*remove child from parent*/
+        top: -212px;
+        left: 0px;
+      }
+      .a_box2 {
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute; /* remove child from parent */
+        bottom: -212px;
+        left: 0px;
+      }
+      .a1_comman {
+        /* transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear; */
+        transition: all 0.2s linear; /*shortcut method*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Overlays</h1>
+    <div class="a_overlays comman">
+      <div class="a_box1 comman a1_comman"></div>
+      <div class="a_box2 comman a1_comman"></div>
+    </div>
+  </body>
+</html>
