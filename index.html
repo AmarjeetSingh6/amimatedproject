@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
     <title>Animated Project</title>
     <style>
       .comman {
@@ -42,11 +43,42 @@
             transition-timing-function: linear; */
         transition: all 0.2s linear; /*shortcut method*/
       }
+      .k_anchor{
+        text-decoration: none;
+        color: gray;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        border-radius: 30px;
+        z-index: 1000; /*upfront from overlay*/
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+        transition-delay: 0.3s;
+        opacity: 0;
+
+      }
+      .b_anchor{
+        left: 140px;
+        
+      }
+      .a_overlays:hover .k_anchor{
+        opacity: 1;
+
+      }
     </style>
   </head>
   <body>
     <h1>Overlays</h1>
     <div class="a_overlays comman">
+        <a href="#" class="k_anchor"><i class="fa-solid fa-link"></i></a>
+        <a href="#" class="k_anchor b_anchor"><i class="fa-solid fa-magnifying-glass"></i></a>
       <div class="a_box1 comman a1_comman"></div>
       <div class="a_box2 comman a1_comman"></div>
     </div>
